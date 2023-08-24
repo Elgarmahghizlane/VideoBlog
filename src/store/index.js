@@ -34,6 +34,8 @@ export default new Vuex.Store({
         blogDate: "Aug 20,2023"
       },
     ],
+    blogPosts:[],
+    postLoded:null,
     editPost: null,
     blogDescription: "",
     blogTitle: "",
@@ -44,20 +46,15 @@ export default new Vuex.Store({
   getters: {
   },
   mutations: {
-    newBlogPost(state, payload) {
+    updateBlogDescription(state, payload) {
       state.blogDescription = payload
     },
-
     updateBlogTitle(state, payload) {
       state.blogTitle = payload
-    },
-    createFileURL(state, payload) {
-      state.blogVideoFileURL = payload
     },
     openVideoPreview(state){
       state.blogVideoPreview = !state.blogVideoPreview
     },
-
     toggleEditPost(state, payload) {
       state.editPost = payload
       console.log(state.editPost)
@@ -65,10 +62,20 @@ export default new Vuex.Store({
     fileNameChange(state, payload) {
       state.blogVideoName = payload
     },
-   
+    createFileURL(state, payload){
+      state.blogVideoFileURL = payload
+
+    }
 
   },
   actions: {
+    // async getPost({state}){
+    //   const dataBase = await db.collection('blogPosts').orderBy('date', 'desc')
+    //   const dbResults = await dataBase.get()
+    //   dbResults.forEach((doc) => {
+    //     if (!state.blogPosts.some((post) => post.)
+    //   })
+    // }
   },
   modules: {
   }

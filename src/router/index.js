@@ -37,6 +37,14 @@ const routes = [
       title:"Preview Post"
     }
   },
+  {
+    path: '/view-blog',
+    name: 'SingleBlog',
+    component: () => import( '../views/SingleBlog.vue'),
+    meta:{
+      title:"Preview Blog Post"
+    }
+  },
   
 ]
 
