@@ -2,6 +2,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import "firebase/compat/database";
 import "firebase/compat/storage";
+import "firebase/compat/auth"
 
 var firebaseConfig = {
     apiKey: "AIzaSyB17jjvlfxPghknX953SEGLGNastGotn_M",
@@ -11,6 +12,8 @@ var firebaseConfig = {
     storageBucket: "videoblog-d9a7b.appspot.com",
     messagingSenderId: "1068841311940",
     appId: "1:1068841311940:web:abf936f803d01e14207391"
+
+    
 
 }
 const firebaseApp = firebase.initializeApp(firebaseConfig)

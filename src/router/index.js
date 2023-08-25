@@ -37,15 +37,39 @@ const routes = [
       title:"Preview Post"
     }
   },
+  // {
+  //   path: '/single-blog/:blogTitle',
+  //   name: 'SingleBlog',
+  //   component: () => import( '../views/SingleBlog.vue'),
+  //   meta:{
+  //     title:"Current Blog"
+  //   }
+  // },
   {
-    path: '/view-blog',
+    path: '/single-blog/:blogTitle',
     name: 'SingleBlog',
-    component: () => import( '../views/SingleBlog.vue'),
+    component: () => import('../views/SingleBlog.vue'),
+    props: true,
+    meta: {
+      title: 'Single Blog Post',
+    },
+  },
+  {
+    path: '/login',
+    name: 'LogIn',
+    component: () => import( '../views/LogIn.vue'),
     meta:{
-      title:"Preview Blog Post"
+      title:"Preview Post"
     }
   },
-  
+  {
+    path: '/register',
+    name: 'RegisTer',
+    component: () => import( '../views/RegisTer.vue'),
+    meta:{
+      title:"Sign Up"
+    }
+  },
 ]
 
 const router = new VueRouter({

@@ -57,7 +57,7 @@ export default {
     name: "CreatePost",
     data() {
         return {
-            file: null,
+            fill: null,
             error: null,
             errorMsg: null,
 
@@ -88,15 +88,15 @@ export default {
                         async () => {
                             const downloadURL = await docRef.getDownloadURL();
                             const timestamp = Date.now();
-                            const data =  await db.collection("blogPosts").doc()
-                            await data.set ({
-                                blogID:data.id,
+                            const data = {
                                 blogTitle: this.blogTitle,
                                 blogDescription: this.blogDescription,
                                 blogCoverVideo: downloadURL,
                                 blogVideoName: this.$store.state.blogVideoName,
                                 date: timestamp,
-                            });
+                            };
+                            // Adding the new document to the 'blogPosts' collection
+                            await db.collection("blogPosts").add(data);
                             alert("Blog post uploaded successfully!");
                             this.$router.push("/blogs");
                             console.log("Blog post added successfully")

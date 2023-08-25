@@ -14,7 +14,7 @@
             </div>
 
             <router-link class="rounded-md text-white bg-black hover:bg-[#5eaee1] mt-2 p-3" v-if="post.welcomeScreen"
-                to="#" >Log In / Sign In
+                to="/login" >Log In / Sign Up
             </router-link>
         </div>
         <div class="blogCover float-right">

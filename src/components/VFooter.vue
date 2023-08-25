@@ -2,10 +2,10 @@
     <div class="w-full p-4  bg-[#f8f9f9]">
         <div class="flex items-center justify-center gap-4 mx-12 text-base">
             <div>
-                <a href="#" class=" hover:underline  ">Home</a>
+                <a href="/" class=" hover:underline  ">Home</a>
             </div>
             <div>
-                <a href="#" class=" hover:underline  ">About</a>
+                <a href="/blogs" class=" hover:underline  ">Blog</a>
             </div>
             <div>
                 <a href="#" class=" hover:underline  ">Github</a>

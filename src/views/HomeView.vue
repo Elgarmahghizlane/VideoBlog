@@ -6,7 +6,7 @@
         View More Recent Blogs
       </h1>
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4" >
-        <BlogCards :post="post" v-for="(post,i) in sampleBlogCards " :key="i" />
+        <BlogCards :post="post" v-for="(post,i) in blogPostsCards " :key="i" />
       </div>
     </div>
 
@@ -30,11 +30,12 @@ export default {
         welcomeScreen: true,
         photo: "banner"
       },
+
     }
   },
   computed: {
-    sampleBlogCards(){
-      return this.$store.state.sampleBlogCards
+    blogPostsCards(){
+      return this.$store.getters.blogPostsCards
     }
   }
 }

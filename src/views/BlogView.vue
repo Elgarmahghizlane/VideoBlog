@@ -13,7 +13,7 @@
             </label>
         </div>
         <div  class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-            <BlogCards :post="post" v-for="(post, i) in sampleBlogCards " :key="i" />
+            <BlogCards :post="post" v-for="(post, i) in blogPosts " :key="i" />
         </div>
     </div>
 </template>
@@ -23,8 +23,8 @@ export default {
     name: "BlogView",
     components: { BlogCards },
     computed: {
-        sampleBlogCards() {
-            return this.$store.state.sampleBlogCards
+        blogPosts() {
+            return this.$store.state.blogPosts
         },
         editPost:{
             get(){
