@@ -4,7 +4,6 @@
             <span class="capitalize mr-4">
                 Toggle Editing post
             </span>
-            <!-- <input type="checkbox" class=" text-blue-500 rounded-full" v-model="editPost"> -->
             <label class="relative inline-flex items-center cursor-pointer">
                 <input type="checkbox" v-model="editPost" class="sr-only peer">
                 <div
